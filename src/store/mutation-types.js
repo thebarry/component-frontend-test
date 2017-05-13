@@ -1,0 +1,3 @@
+export default {
+  RECEIVER_ALL_PURCHASES: 'RECEIVER_ALL_PURCHASES',
+};

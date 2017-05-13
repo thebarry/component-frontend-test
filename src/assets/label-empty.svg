@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="298px" height="298px" viewBox="0 0 298 298" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>label-empty</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="label-empty" transform="translate(0.250000, 0.000000)" fill-rule="nonzero" fill="#211915">
+            <path d="M148.87,0 C66.6513693,-5.03443915e-15 1.00688783e-14,66.6513693 0,148.87 C-1.00688783e-14,231.088631 66.6513693,297.74 148.87,297.74 C231.088631,297.74 297.74,231.088631 297.74,148.87 C297.74,109.387221 282.055527,71.5215541 254.136987,43.6030135 C226.218446,15.6844728 188.352779,2.41762294e-15 148.87,0 Z M148.87,279.13 C76.9293885,279.13 18.61,220.810612 18.61,148.87 C18.61,76.9293885 76.9293885,18.61 148.87,18.61 C220.810612,18.61 279.13,76.9293885 279.13,148.87 C279.047339,220.776345 220.776345,279.047339 148.87,279.13 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
