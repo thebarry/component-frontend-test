@@ -1,11 +1,11 @@
 export default [{
   id: 'abc3',
   payment: {
-    code: '2a9577b1887d93aabc313f2a92b48637c0df6a6c',
+    code: '2a9577b188',
     status: false,
     mode: 'cash',
-    total: '239,00',
-    update: Date.now(),
+    value: '999,99',
+    timestamp: Date.now(),
   },
   client: {
     name: 'Felipe Oliveira',
@@ -14,11 +14,11 @@ export default [{
 }, {
   id: '5bb2',
   payment: {
-    code: '5f2e3e5fb59233d5bb223480d90d6fcd787a30d9',
+    code: '5f2e3e5fb5',
     status: true,
-    mode: 'card',
-    total: '457,75',
-    update: Date.now(),
+    mode: 'credit-card',
+    value: '457,75',
+    timestamp: Date.now(),
   },
   client: {
     name: 'Tainá Nascimento',
@@ -27,11 +27,11 @@ export default [{
 }, {
   id: '48fc',
   payment: {
-    code: '18fdbdc012b48fc3eda54eef6a118950f668777a',
+    code: '18fdbdc012',
     status: true,
-    mode: 'card',
-    total: '999,99',
-    update: Date.now(),
+    mode: 'debit-card',
+    value: '999,99',
+    timestamp: Date.now(),
   },
   client: {
     name: 'Gustavo Nascimento',
