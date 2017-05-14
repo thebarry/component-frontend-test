@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="$style.container">
     <OrderList></OrderList>
   </div>
 </template>
@@ -14,13 +14,14 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+<style module>
+.container {
+  padding: 30px 16px;
+  background: #33cccc;
+  background: linear-gradient(to bottom, #33cccc 0%,#0099cc 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 14px;
+  color: #333399;
 }
 </style>

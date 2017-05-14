@@ -25,8 +25,9 @@
 
 <style module>
   .list {
-    margin-top: 0;
-    margin-bottom: 0;
+    max-width: 400px;
+    margin: 0 auto;
     padding-left: 0;
+    list-style: none;
   }
 </style>
