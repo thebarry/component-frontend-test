@@ -8,7 +8,7 @@
         <th>Cliente</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody :class="$style.tbody">
       <template v-for="purchase in purchases">
         <tr :class="$style.row" :key="purchase.id">
           <CodeLabel :purchase="purchase"></CodeLabel>
@@ -64,16 +64,42 @@
     color: #fff;
   }
 
-  .code {
-    color: #333399;
-  }
-
   .row {
+    border-radius: 50px;
     background-color: #fff;
     cursor: pointer;
   }
 
+  .row:hover {
+    box-shadow: 0 15px 14px -14px #000b2d;
+  }
+
   .spacing {
     height: 16px;
+  }
+
+  .code {
+    color: #333399;
+  }
+
+  @media screen and (max-width: 768px) {
+    .td {
+      padding: 0;
+    }
+
+    .thead {
+      display: none;
+    }
+
+    .table,
+    .tbody,
+    .row {
+      display: block;
+    }
+
+    .row {
+      padding: 1em;
+      border-radius: 10px;
+    }
   }
 </style>

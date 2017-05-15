@@ -40,6 +40,13 @@ export default {
     padding: 0 1em;
   }
 
+  @media screen and (max-width: 768px) {
+    .td {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+
   .icon {
     width: 20px;
     height: 20px;

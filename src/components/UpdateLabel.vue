@@ -1,7 +1,7 @@
 <template>
   <td :class="$style.td">
-    <p :class="[$style.text, $style.date]" v-text="date.date"></p>
-    <p :class="[$style.text, $style.minutes]" v-text="date.minutes"></p>
+    <p :class="$style.text" v-text="date.date"></p>
+    <p :class="$style.text" v-text="date.hours"></p>
   </td>
 </template>
 
@@ -18,7 +18,7 @@ export default {
       const month = date.getMonth();
       return {
         date: `${day}/${month}/${year}`,
-        minutes: `${hours}h${minutes}`,
+        hours: `${hours}h${minutes}`,
       };
     },
   },
@@ -30,18 +30,22 @@ export default {
   padding: 0 1em;
 }
 
+@media screen and (max-width: 768px) {
+  .td {
+    display: inline-block;
+    padding: 0;
+  }
+}
+
 .text {
+  position: relative;
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.minutes {
-  position: relative;
   margin-left: 1em;
 }
 
-.minutes::before {
+.text::before {
   content: "";
   position: absolute;
   top: 0;
@@ -53,5 +57,11 @@ export default {
   height: 3px;
   border-radius: 50%;
   background-color: #3333cc;
+}
+
+@media screen and (min-width: 768px) {
+  .text:first-of-type::before {
+    background-color: #fff;
+  }
 }
 </style>
