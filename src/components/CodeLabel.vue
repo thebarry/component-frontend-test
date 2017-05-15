@@ -1,10 +1,10 @@
 <template>
-  <div :class="$style.container">
+  <td :class="$style.td">
     <svg :class="[$style.icon, {[$style.error]: !purchase.payment.status}]">
       <use :xlink:href="`#${glyph}`"></use>
     </svg>
-    <p :class="$style.code" v-text="purchase.payment.code"></p>
-  </div>
+    <p :class="$style.text" v-text="purchase.payment.code"></p>
+  </td>
 </template>
 
 <script>
@@ -22,38 +22,26 @@ export default {
 </script>
 
 <style module>
-  .container {
-    display: flex;
-    align-items: center;
-    width: 17%;
-    min-width: 120px;
-    margin-bottom: 12px;
-  }
-
-  @media screen and (min-width: 768px) {
-    .container {
-      width: 20%;
-      height: 100%;
-      min-width: 150px;
-      margin-bottom: 0;
-      padding-left: 1em;
-    }
+  .td {
+    border-radius: 50px 0 0 50px;
+    padding: 0 1em;
   }
 
   .icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
     fill: #33cccc;
+    vertical-align: middle;
   }
 
   .icon.error {
-    fill: #ff3366;
+    fill: #ff3333;
   }
 
-  .code {
-    width: calc(100% - 32px);
+  .text {
+    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 10px;
   }
 </style>
