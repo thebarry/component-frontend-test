@@ -8,17 +8,17 @@
 </template>
 
 <script>
-import icon from '../assets/label-check.svg';
-import iconError from '../assets/label-error.svg';
+  import icon from '../assets/label-check.svg';
+  import iconError from '../assets/label-error.svg';
 
-export default {
-  props: ['purchase'],
-  computed: {
-    glyph() {
-      return this.purchase.payment.status ? icon.id : iconError.id;
+  export default {
+    props: ['purchase'],
+    computed: {
+      glyph() {
+        return this.purchase.payment.status ? icon.id : iconError.id;
+      },
     },
-  },
-};
+  };
 </script>
 
 <style module>

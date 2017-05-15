@@ -11,9 +11,9 @@
 </template>
 
 <script>
-export default {
-  props: ['purchase'],
-};
+  export default {
+    props: ['purchase'],
+  };
 </script>
 
 <style module>

@@ -8,31 +8,31 @@
 </template>
 
 <script>
-import iconDebitCard from '../assets/debit-card.svg';
-import iconCreditCard from '../assets/credit-card.svg';
-import iconCash from '../assets/bar-codel.svg';
+  import iconDebitCard from '../assets/debit-card.svg';
+  import iconCreditCard from '../assets/credit-card.svg';
+  import iconCash from '../assets/bar-codel.svg';
 
-export default {
-  props: ['purchase'],
-  computed: {
-    glyph() {
-      let glyph;
-      switch (this.purchase.payment.mode) {
-        case 'cash':
-          glyph = iconCash.id;
-          break;
-        case 'debit-card':
-          glyph = iconDebitCard.id;
-          break;
-        case 'credit-card':
-          glyph = iconCreditCard.id;
-          break;
-        default:
-      }
-      return glyph;
+  export default {
+    props: ['purchase'],
+    computed: {
+      glyph() {
+        let glyph;
+        switch (this.purchase.payment.mode) {
+          case 'cash':
+            glyph = iconCash.id;
+            break;
+          case 'debit-card':
+            glyph = iconDebitCard.id;
+            break;
+          case 'credit-card':
+            glyph = iconCreditCard.id;
+            break;
+          default:
+        }
+        return glyph;
+      },
     },
-  },
-};
+  };
 </script>
 
 <style module>

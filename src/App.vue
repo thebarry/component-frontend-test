@@ -11,7 +11,7 @@
     components: {
       OrderList,
     },
-};
+  };
 </script>
 
 <style module>
