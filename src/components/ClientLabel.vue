@@ -24,12 +24,21 @@ export default {
     border-left: 1px dashed #ccc;
   }
 
+  @media screen and (max-width: 768px) {
+    .td {
+      border: none;
+      display: block;
+      padding: 0;
+    }
+  }
+
   .icon {
     margin-right: 0.5em;
-    padding: 0.5em;
+    padding: 0.35em;
     border-radius: 50%;
     background: #3333cc;
     background: linear-gradient(135deg,  #3333cc 0%,#9966cc 100%);
+    font-size: 0.8em;
     color: #fff;
   }
 
@@ -46,5 +55,15 @@ export default {
   .text {
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .td {
+      height: auto;
+      margin-top: 0.75em;
+      padding-top: 0.75em;
+      border-top: 1px dashed #ccc;
+      border-radius: 0;
+    }
   }
 </style>
