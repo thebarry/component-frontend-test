@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.container">
+  <td :class="$style.td">
     <div :class="$style.icon">
       <span>NC</span>
     </div>
@@ -7,7 +7,7 @@
       <p :class="[$style.text, $style.name]" v-text="purchase.client.name"></p>
       <p :class="$style.text" v-text="purchase.client.email"></p>
     </div>
-  </div>
+  </td>
 </template>
 
 <script>
@@ -17,51 +17,34 @@ export default {
 </script>
 
 <style module>
-  .container {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px dashed #ccc;
-  }
-
-  @media screen and (min-width: 768px) {
-    .container {
-      width: 40%;
-      height: 100%;
-      min-width: 260px;
-      margin-top: 0;
-      padding-top: 0;
-      padding-right: 1em;
-      border-top: none;
-    }
+  .td {
+    height: 60px;
+    padding: 0 1em;
+    border-radius: 0 50px 50px 0;
+    border-left: 1px dashed #ccc;
   }
 
   .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
+    margin-right: 0.5em;
+    padding: 0.5em;
+    border-radius: 50%;
     background: #3333cc;
     background: linear-gradient(135deg,  #3333cc 0%,#9966cc 100%);
-    border-radius: 50%;
-    font-size: 10px;
     color: #fff;
   }
 
+  .icon,
   .content {
-    width: calc(100% - 25px);
-  }
-
-  .text {
-    word-break: break-all;
-    margin-top: 0;
-    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .name {
     font-weight: bold;
+  }
+
+  .text {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 </style>

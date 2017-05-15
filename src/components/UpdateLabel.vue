@@ -1,8 +1,8 @@
 <template>
-  <div :class="$style.container">
+  <td :class="$style.td">
     <p :class="[$style.text, $style.date]" v-text="date.date"></p>
-    <p :class="$style.text" v-text="date.minutes"></p>
-  </div>
+    <p :class="[$style.text, $style.minutes]" v-text="date.minutes"></p>
+  </td>
 </template>
 
 <script>
@@ -26,33 +26,32 @@ export default {
 </script>
 
 <style module>
-  .container {
-    display: flex;
-    align-items: center;
-  }
+.td {
+  padding: 0 1em;
+}
 
-  .text {
-    position: relative;
-    margin: 0 0 0 20px;
-  }
+.text {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-  .text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -12px;
-    margin: auto;
-    display: inline-block;
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background-color: #483ecc;
-  }
+.minutes {
+  position: relative;
+  margin-left: 1em;
+}
 
-  @media screen and (min-width: 768px) {
-    .date::before {
-      background-color: transparent;
-    }
-  }
+.minutes::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto auto -0.7em;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #3333cc;
+}
 </style>

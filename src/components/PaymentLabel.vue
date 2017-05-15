@@ -1,10 +1,10 @@
 <template>
-  <div :class="$style.container">
+  <td :class="$style.td">
     <svg :class="$style.icon">
       <use :xlink:href="`#${glyph}`"></use>
     </svg>
-    <p :class="$style.value" v-text="purchase.payment.value"></p>
-  </div>
+    <p :class="$style.text" v-text="purchase.payment.value"></p>
+  </td>
 </template>
 
 <script>
@@ -36,20 +36,21 @@ export default {
 </script>
 
 <style module>
-  .container {
-    display: flex;
-    align-items: center;
+  .td {
+    padding: 0 1em;
   }
 
   .icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5em;
     fill: #9900ff;
+    vertical-align: middle;
   }
 
-  .value {
+  .text {
+    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 10px;
   }
 </style>
