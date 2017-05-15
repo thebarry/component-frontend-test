@@ -25,7 +25,19 @@ export default {
   .container {
     display: flex;
     align-items: center;
+    width: 17%;
+    min-width: 120px;
     margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 20%;
+      height: 100%;
+      min-width: 150px;
+      margin-bottom: 0;
+      padding-left: 1em;
+    }
   }
 
   .icon {

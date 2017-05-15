@@ -25,6 +25,18 @@ export default {
     border-top: 1px dashed #ccc;
   }
 
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 40%;
+      height: 100%;
+      min-width: 260px;
+      margin-top: 0;
+      padding-top: 0;
+      padding-right: 1em;
+      border-top: none;
+    }
+  }
+
   .icon {
     display: flex;
     align-items: center;

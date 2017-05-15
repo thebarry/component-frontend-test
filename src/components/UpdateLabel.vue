@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <p :class="$style.text" v-text="date.date"></p>
+    <p :class="[$style.text, $style.date]" v-text="date.date"></p>
     <p :class="$style.text" v-text="date.minutes"></p>
   </div>
 </template>
@@ -48,5 +48,11 @@ export default {
     height: 3px;
     border-radius: 50%;
     background-color: #483ecc;
+  }
+
+  @media screen and (min-width: 768px) {
+    .date::before {
+      background-color: transparent;
+    }
   }
 </style>

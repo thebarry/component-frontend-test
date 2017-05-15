@@ -31,10 +31,29 @@
 <style module>
   .container {
     overflow-x: auto;
-    padding: 16px;
+    padding: 1em;
     border-radius: 5px;
     background-color: #fff;
     letter-spacing: 2px;
+    transition: box-shadow 250ms;
+    cursor: pointer;
+  }
+
+  @media (hover) {
+    .container:hover {
+      box-shadow: 0 10px 20px -7px #003546;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      padding: 0;
+      border-radius: 50px
+    }
   }
 
   .container:not(:first-child) {
@@ -43,5 +62,13 @@
 
   .wrap {
     display: flex;
+  }
+
+  @media screen and (min-width: 768px) {
+    .wrap {
+      justify-content: center;
+      width: 40%;
+      height: 100%;
+    }
   }
 </style>
