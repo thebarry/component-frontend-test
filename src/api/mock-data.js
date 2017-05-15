@@ -4,7 +4,7 @@ export default [{
     code: '2a9577b188',
     status: false,
     mode: 'cash',
-    value: '999,99',
+    value: '999.99',
     timestamp: Date.now(),
   },
   client: {
@@ -17,7 +17,7 @@ export default [{
     code: '5f2e3e5fb5',
     status: true,
     mode: 'credit-card',
-    value: '457,75',
+    value: '457.75',
     timestamp: Date.now(),
   },
   client: {
@@ -30,7 +30,7 @@ export default [{
     code: '18fdbdc012',
     status: true,
     mode: 'debit-card',
-    value: '999,99',
+    value: '999.99',
     timestamp: Date.now(),
   },
   client: {
