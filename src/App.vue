@@ -1,15 +1,18 @@
 <template>
   <div id="app" :class="$style.container">
+    <MainHeader></MainHeader>
     <OrderList></OrderList>
   </div>
 </template>
 
 <script>
   import OrderList from './components/OrderList';
+  import MainHeader from './components/Header';
 
   export default {
     components: {
       OrderList,
+      MainHeader,
     },
   };
 </script>

@@ -49,7 +49,7 @@
 
 <style module>
   .table {
-    max-width: 768px;
+    max-width: 678px;
     margin-right: auto;
     margin-left: auto;
     border-collapse: collapse;
