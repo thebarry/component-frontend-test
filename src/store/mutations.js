@@ -34,7 +34,7 @@ export default {
     state.purchases.sort((previous, current) => {
       const p = Number(previous.payment.value);
       const c = Number(current.payment.value);
-      return p > c;
+      return p < c;
     });
   },
 
@@ -42,7 +42,7 @@ export default {
     state.purchases.sort((previous, current) => {
       const p = Number(previous.payment.value);
       const c = Number(current.payment.value);
-      return p < c;
+      return p > c;
     });
   },
 
@@ -54,7 +54,7 @@ export default {
     state.purchases.sort((previous, current) => {
       const p = Date.parse(previous.payment.date);
       const c = Date.parse(current.payment.date);
-      return p > c;
+      return p < c;
     });
   },
 
@@ -62,7 +62,7 @@ export default {
     state.purchases.sort((previous, current) => {
       const p = Date.parse(previous.payment.date);
       const c = Date.parse(current.payment.date);
-      return p < c;
+      return p > c;
     });
   },
 };
