@@ -1,5 +1,5 @@
 <template>
-  <td :class="$style.td">
+  <td :class="$style.td" v-on:click="sort">
     <svg :class="$style.icon">
       <use :xlink:href="`#${glyph}`"></use>
     </svg>
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import { SORT_BY_PAYMENT } from '../store/mutation-types';
   import iconDebitCard from '../assets/debit-card.svg';
   import iconCreditCard from '../assets/credit-card.svg';
   import iconCash from '../assets/bar-codel.svg';
@@ -30,6 +31,11 @@
           default:
         }
         return glyph;
+      },
+    },
+    methods: {
+      sort() {
+        this.$store.dispatch('sort', SORT_BY_PAYMENT);
       },
     },
   };

@@ -1,25 +1,33 @@
 <template>
-  <td :class="$style.td">
+  <td :class="$style.td" v-on:click="sort">
     <p :class="$style.text" v-text="date.date"></p>
     <p :class="$style.text" v-text="date.hours"></p>
   </td>
 </template>
 
 <script>
+  import { SORT_BY_DATE } from '../store/mutation-types';
+
   export default {
     props: ['purchase'],
     computed: {
       date() {
-        const date = new Date(this.purchase.payment.timestamp);
-        const day = date.getDate();
+        const timestamp = Date.parse(this.purchase.payment.date);
+        const date = new Date(timestamp);
+        const day = date.getUTCDate();
         const year = date.getFullYear();
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        const month = date.getMonth();
+        const hours = date.getUTCHours();
+        const minutes = date.getUTCMinutes();
+        const month = date.getUTCMonth() + 1;
         return {
           date: `${day}/${month}/${year}`,
           hours: `${hours}h${minutes}`,
         };
+      },
+    },
+    methods: {
+      sort() {
+        this.$store.dispatch('sort', SORT_BY_DATE);
       },
     },
   };

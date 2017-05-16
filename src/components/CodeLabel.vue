@@ -1,5 +1,5 @@
 <template>
-  <td :class="$style.td">
+  <td :class="$style.td" v-on:click="sort">
     <svg :class="[$style.icon, {[$style.error]: !purchase.payment.status}]">
       <use :xlink:href="`#${glyph}`"></use>
     </svg>
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+  import { SORT_BY_STATUS } from '../store/mutation-types';
   import icon from '../assets/label-check.svg';
   import iconError from '../assets/label-error.svg';
 
@@ -16,6 +17,11 @@
     computed: {
       glyph() {
         return this.purchase.payment.status ? icon.id : iconError.id;
+      },
+    },
+    methods: {
+      sort() {
+        this.$store.dispatch('sort', SORT_BY_STATUS);
       },
     },
   };
