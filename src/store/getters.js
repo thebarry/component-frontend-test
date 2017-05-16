@@ -12,8 +12,8 @@ function totalPurchases(state) {
   return {
     number: state.purchases.length,
     total: state.purchases.reduce((previous, current) => {
-      const pre = typeof previous === 'number' ? previous : Number(previous.payment.value);
-      return pre + Number(current.payment.value);
+      const pre = typeof previous === 'number' ? previous : parseInt(previous.payment.value, 10);
+      return pre + parseInt(current.payment.value, 10);
     }),
   };
 }
